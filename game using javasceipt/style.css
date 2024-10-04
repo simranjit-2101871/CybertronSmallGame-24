@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    Padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.gameContainer {
+    background-image: url(cybertron.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.optimus {
+    background-image: url(optimus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 154px;
+    position: absolute;
+    bottom: 5px;
+    left: 52px;
+}
+
+
+/* Use CSS mask for removing white background 
+    -webkit-mask-image: url('optimus.jpg');
+    -webkit-mask-size: cover;
+    mask-image: url('optimus.jpg');
+    mask-size: cover;
+}*//*not working the masking property*/
+
+.obstacle {
+    background-image: url(megatron.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 174px;
+    height: 134px;
+    position: absolute;
+    bottom: 3px;
+    left: 44vw;
+}
+
+.animateOpti{
+    animation: dino 0.6s linear;
+} 
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+
+
+
+.obstacleAni{
+    animation: obstacleAni 3s linear infinite;
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu',white;
+    color: white;
+}
+
+
+
+#scoreCount{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
